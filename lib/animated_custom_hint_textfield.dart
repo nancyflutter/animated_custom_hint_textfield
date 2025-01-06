@@ -347,6 +347,7 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
   int _currentIndex = 0;
   bool isUserTyping = false;
   bool _isFocused = false;
+  // ignore: unused_field
   bool _isCyclingHints = true;
 
   @override
