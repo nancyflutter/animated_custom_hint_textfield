@@ -145,7 +145,7 @@ AnimatedHintTextField(
 </code></pre>
 
 <h3>Output:</h3>
-<p>Here are some images showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
+<p>Image that showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
 
 <img src="https://github.com/user-attachments/assets/2c952678-3c0e-46a6-a068-02424aeacde2" alt="custom_animated_hint_textfield1" height="400" width="250">
 
@@ -172,7 +172,7 @@ AnimatedHintTextField(
 </code></pre>
 
 <h2>Output:</h2>
-<p>Here are some images showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
+<p>Image that showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
 <img src="https://github.com/user-attachments/assets/16d2bb09-48e6-4bcf-867c-0af5a657f36c" alt="animated_custom_hint_textfield_" height="400" width="250">
 
 
