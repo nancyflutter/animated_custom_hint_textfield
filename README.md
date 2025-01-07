@@ -200,9 +200,3 @@ AnimatedHintTextField(
 <h2>Feedback</h2>
 <p>If you encounter any issues or have suggestions, feel free to contribute or open an issue on the GitHub repository. Your feedback is highly appreciated!</p>
 
-
-
-
-
-
-
