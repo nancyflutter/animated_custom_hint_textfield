@@ -17,7 +17,7 @@ void main() {
       home: Scaffold(
         body: AnimatedHintTextField(
           hints: testHints,
-          hintChangeDuration: const Duration(seconds: 2),
+          hintSwitchDuration: const Duration(seconds: 2),
         ),
       ),
     ));

@@ -16,19 +16,19 @@ class AnimatedHintTextField extends StatefulWidget {
   final List<String> hints;
   final TextEditingController? controller;
   final InputDecoration? inputDecoration;
-  final TextStyle? hintStyleForAnimatedHint;
-  final TextStyle? hintStyleForStatic;
-  final Color? backgroundColor;
-  final Duration hintChangeDuration;
+  final TextStyle? animatedHintTextStyle;
+  final TextStyle? staticHintTextStyle;
+  final Color? fieldBackgroundColor;
+  final Duration hintSwitchDuration;
   final bool autoFocus;
   final bool showHintWhenTyping;
   final bool animateEntireHint;
-  final String? staticSearchText;
+  final String? staticHintText;
   final BorderRadiusGeometry? borderRadius;
-  final BoxBorder? border;
-  final Color? isFocusedBorderColor;
-  final Color? unFocusedBorderColor;
-  final double? borderWidth;
+  final BoxBorder? fieldBorder;
+  final Color? focusedBorderColor;
+  final Color? unfocusedBorderColor;
+  final double? fieldBorderWidth;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final HintAnimationType hintAnimationType; // Use enum for animation type
@@ -38,19 +38,19 @@ class AnimatedHintTextField extends StatefulWidget {
     required this.hints,
     this.controller,
     this.inputDecoration,
-    this.hintStyleForAnimatedHint,
-    this.backgroundColor,
-    this.hintChangeDuration = const Duration(seconds: 2),
+    this.animatedHintTextStyle,
+    this.fieldBackgroundColor,
+    this.hintSwitchDuration = const Duration(seconds: 2),
     this.autoFocus = false,
     this.showHintWhenTyping = false,
     this.animateEntireHint = true,
-    this.hintStyleForStatic,
-    this.staticSearchText,
+    this.staticHintTextStyle,
+    this.staticHintText,
     this.borderRadius,
-    this.border,
-    this.isFocusedBorderColor,
-    this.unFocusedBorderColor,
-    this.borderWidth = 1.0,
+    this.fieldBorder,
+    this.focusedBorderColor,
+    this.unfocusedBorderColor,
+    this.fieldBorderWidth = 1.0,
     this.prefixIcon,
     this.suffixIcon,
     this.hintAnimationType = HintAnimationType.fade, // Default to fade animation
@@ -126,7 +126,7 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
   }
 
   void _startHintAnimation() {
-    Future.delayed(widget.hintChangeDuration, () {
+    Future.delayed(widget.hintSwitchDuration, () {
       if (mounted && (!_isTyping || widget.showHintWhenTyping)) {
         _animationController.forward();
       }
@@ -138,12 +138,12 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
       decoration: BoxDecoration(
-        color: widget.backgroundColor ?? Colors.grey[200],
+        color: widget.fieldBackgroundColor ?? Colors.grey[200],
         borderRadius: widget.borderRadius ?? BorderRadius.circular(8),
-        border: widget.border ??
+        border: widget.fieldBorder ??
             Border.all(
-              color: _isFocused ? widget.isFocusedBorderColor ?? Colors.blue : widget.unFocusedBorderColor ?? Colors.grey[300]!,
-              width: widget.borderWidth ?? 1.0,
+              color: _isFocused ? widget.focusedBorderColor ?? Colors.blue : widget.unfocusedBorderColor ?? Colors.grey[300]!,
+              width: widget.fieldBorderWidth ?? 1.0,
             ),
       ),
       child: FocusScope(
@@ -169,8 +169,8 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
                           children: [
                             if (!widget.animateEntireHint)
                               Text(
-                                widget.staticSearchText ?? "",
-                                style: widget.hintStyleForStatic ?? const TextStyle(fontSize: 14, color: Colors.black),
+                                widget.staticHintText ?? "",
+                                style: widget.staticHintTextStyle ?? const TextStyle(fontSize: 14, color: Colors.black),
                               ),
                             Flexible(
                               child: _buildAnimationWidget(),
@@ -288,7 +288,7 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
         opacity: _fadeAnimation,
         child: Text(
           widget.hints[_currentIndex],
-          style: widget.hintStyleForAnimatedHint ?? const TextStyle(fontSize: 16, color: Colors.grey),
+          style: widget.animatedHintTextStyle ?? const TextStyle(fontSize: 16, color: Colors.grey),
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
         ),
@@ -298,41 +298,41 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
 }
 
 class CircularAnimatedHintTextField extends StatefulWidget {
-  final Color? backgroundColor;
+  final Color? fieldBackgroundColor;
   final BorderRadius? borderRadius;
-  final Border? border;
+  final Border? fieldBorder;
   final Icon? prefixIcon;
   final Icon? suffixIcon;
-  final TextStyle? hintStyleForStatic;
-  final TextStyle? hintStyleForAnimatedHint;
-  final String? staticSearchText;
+  final TextStyle? staticHintTextStyle;
+  final TextStyle? animatedHintTextStyle;
+  final String? staticHintText;
   final bool showHintWhenTyping;
   final bool animateEntireHint;
-  final double? borderWidth;
+  final double? fieldBorderWidth;
   final bool autoFocus;
   final InputDecoration? inputDecoration;
-  final Color? isFocusedBorderColor;
-  final Color? unFocusedBorderColor;
+  final Color? focusedBorderColor;
+  final Color? unfocusedBorderColor;
   final List<String> hints;
 
   const CircularAnimatedHintTextField({
     super.key,
-    this.backgroundColor,
+    this.fieldBackgroundColor,
     this.borderRadius,
-    this.border,
+    this.fieldBorder,
     this.prefixIcon,
     this.suffixIcon,
-    this.hintStyleForStatic,
-    this.staticSearchText,
+    this.staticHintTextStyle,
+    this.staticHintText,
     this.showHintWhenTyping = false,
     this.animateEntireHint = true,
-    this.borderWidth,
+    this.fieldBorderWidth,
     this.autoFocus = false,
     this.inputDecoration,
-    this.isFocusedBorderColor,
-    this.unFocusedBorderColor,
+    this.focusedBorderColor,
+    this.unfocusedBorderColor,
     required this.hints,
-    this.hintStyleForAnimatedHint,
+    this.animatedHintTextStyle,
   });
 
   @override
@@ -404,12 +404,12 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
       decoration: BoxDecoration(
-        color: widget.backgroundColor ?? Colors.grey[200],
+        color: widget.fieldBackgroundColor ?? Colors.grey[200],
         borderRadius: widget.borderRadius ?? BorderRadius.circular(8),
-        border: widget.border ??
+        border: widget.fieldBorder ??
             Border.all(
-              color: _isFocused ? widget.isFocusedBorderColor ?? Colors.blue : widget.unFocusedBorderColor ?? Colors.grey[300]!,
-              width: widget.borderWidth ?? 1.0,
+              color: _isFocused ? widget.focusedBorderColor ?? Colors.blue : widget.unfocusedBorderColor ?? Colors.grey[300]!,
+              width: widget.fieldBorderWidth ?? 1.0,
             ),
       ),
       child: FocusScope(
@@ -435,10 +435,10 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
                           key: ValueKey<int>(_currentIndex),
                           children: [
                             // Display static text if any
-                            if (widget.staticSearchText != "")
+                            if (widget.staticHintText != "")
                               Text(
-                                widget.staticSearchText ?? "",
-                                style: widget.hintStyleForStatic ?? const TextStyle(fontSize: 16, color: Colors.grey),
+                                widget.staticHintText ?? "",
+                                style: widget.staticHintTextStyle ?? const TextStyle(fontSize: 16, color: Colors.grey),
                               ),
                             // Show hint cycling when typing is not happening
                             if (!isUserTyping)
@@ -457,7 +457,7 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
                                           children: [
                                             Text(
                                               widget.hints[index % widget.hints.length],
-                                              style: widget.hintStyleForAnimatedHint ??
+                                              style: widget.animatedHintTextStyle ??
                                                   const TextStyle(
                                                     fontSize: 16,
                                                     color: Colors.blue,
