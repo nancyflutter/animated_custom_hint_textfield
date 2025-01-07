@@ -133,9 +133,9 @@ AnimatedHintTextField(
 
 <h2>Images</h2>
 <p>Here are some images showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
-<img src="https://github.com/user-attachments/assets/f5d33b98-b737-4f0e-9890-55c7bdeed24a" alt="Image 1" height="400" width="200">
-<img src="https://github.com/user-attachments/assets/a6325497-b4cc-4a1a-989d-13de6a30e82a" alt="Image 2" height="400" width="200">
-<img src="https://github.com/user-attachments/assets/ee8045e6-7de5-44a2-add2-7e5c1fd14319" alt="Image 3" height="400" width="250">
+<img src="https://github.com/user-attachments/assets/f5d33b98-b737-4f0e-9890-55c7bdeed24a" height="400" width="200">
+<img src="https://github.com/user-attachments/assets/a6325497-b4cc-4a1a-989d-13de6a30e82a" height="400" width="200">
+<img src="https://github.com/user-attachments/assets/ee8045e6-7de5-44a2-add2-7e5c1fd14319" height="400" width="250">
 
 <h2>Conclusion</h2>
 <p>The <strong>Custom Animated Hint TextField</strong> package allows you to add beautiful and dynamic hint text animations to your Flutter applications, creating an engaging user experience. With multiple animation types and full customization options, you can tailor the animations to suit your app’s style.</p>
