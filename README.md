@@ -1,3 +1,4 @@
+<h2>custom_animated_hint_textfield</h2>
 <p>The <strong>Custom Animated Hint TextField</strong> is a Flutter package that enhances text input fields with dynamic and visually appealing animations for hint texts. You can create unique animations like cyclic scrolling, sliding, scaling, fading, and more, while maintaining the flexibility to customize the design and behavior to suit your app’s needs.</p>
 
 <h2>Features</h2>
@@ -22,7 +23,7 @@ dependencies:
 import 'package:custom_animated_hint_textfield/custom_animated_hint_textfield.dart';
 </code></pre>
 
-<h2>Usage 1:</h2>
+<h2>Usage 1: "CircularAnimatedHintTextField" </h2>
 <p>The <strong>Custom Animated Hint TextField</strong> widget allows you to create a dynamic and visually appealing text input field with animated hints that guide the user. You can easily customize the hint text, animations, and styles to suit your app's design and functionality. Here's how you can use it:</p>
 
 <pre><code>
@@ -33,11 +34,10 @@ CircularAnimatedHintTextField(
   
   // The suffix icon displayed on the right side of the text field.
   // Similar to the prefix icon, you can change it based on your requirements.
-  // suffixIcon: Icon(Icons.access_time_filled, color: Colors.purple),
+  suffixIcon: Icon(Icons.access_time_filled, color: Colors.purple),
 
   // The static hint text that appears when the text field is empty.
   // This text can be customized to guide the user on what to input. 
-  // Example: "Search food...".
   staticHintText: "Search food...",  // <-- Modify this to change the default hint text.
   
   // The style applied to the static hint text. 
@@ -88,7 +88,6 @@ CircularAnimatedHintTextField(
 <img src="https://github.com/user-attachments/assets/42835fd5-187c-4ceb-9e10-d16805798b1c" alt="animated_field_A" height="400" width="230">
 <img src="https://github.com/user-attachments/assets/92cb5af7-0bfc-40aa-9f61-52d234ac5126" alt="1" height="400" width="200">
 <img src="https://github.com/user-attachments/assets/2433e58b-cf4a-49fc-81b7-03d62e34c856" alt="2" height="400" width="200">
-<img src="https://github.com/user-attachments/assets/8949f3b0-6c60-4ab3-b792-936662f19bf6" alt="3" height="400" width="200">
 
 
 <h3>Customization Options</h3>
@@ -101,13 +100,78 @@ CircularAnimatedHintTextField(
   <li><strong>animatedHintTextStyle</strong>: Set the style for the animated hint text that appears during user interaction.</li>
 </ul>
 
+
+<h2>Usage 2: "AnimatedHintTextField" </h2>
+
+<h3>Type Of Animation:</h3>
+<pre><code>
+  hintAnimationType: HintAnimationType.fade,
+  hintAnimationType: HintAnimationType.slide,
+  hintAnimationType: HintAnimationType.scale,
+  hintAnimationType: HintAnimationType.slideFromTop,
+  hintAnimationType: HintAnimationType.slideFromBottom,
+  hintAnimationType: HintAnimationType.topToBottom,
+  hintAnimationType: HintAnimationType.bottomToTop,
+</code></pre>
+
+<p>Here is an example usage of the <strong>Custom Animated Hint TextField</strong> widget:</p>
+<h2>Exampe [static text with animated hint]</h2>
+<pre><code>
+AnimatedHintTextField(
+  animateHintText: false,
+  staticHintText: "Search... ",
+  staticHintTextStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+  hints: const [
+    'Quick Search 💡',
+    'Explore More 🌍',
+    'Find Your Favorite 🔍',
+  ],
+  fieldBackgroundColor: Colors.grey[200],
+  animatedHintTextStyle: const TextStyle(fontSize: 16, color: Colors.black),
+  hintSwitchDuration: const Duration(seconds: 2),
+  hintAnimationType: HintAnimationType.fade,
+),
+</code></pre>
+
+<h3>Output:</h3>
+<p>Here are some images showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
+
+<img src="https://github.com/user-attachments/assets/2c952678-3c0e-46a6-a068-02424aeacde2" alt="custom_animated_hint_textfield1" height="400" width="250">
+
+<h2>Exampe [Animated hint without static Text]</h2>
+<pre><code>
+// Fade Animation
+AnimatedHintTextField(
+ // animateHintText: false,
+ // staticHintText: "Search... ",
+ // staticHintTextStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+ hints: const [
+     'Quick Search 💡',
+     'Explore More 🌍',
+     'Find Your Favorite 🔍',
+   ],
+ fieldBackgroundColor: Colors.grey[200],
+ animatedHintTextStyle: const TextStyle(
+       fontSize: 15,
+       color: Colors.black,
+       fontWeight: FontWeight.bold),
+ hintSwitchDuration: const Duration(seconds: 2),
+ hintAnimationType: HintAnimationType.fade,
+)
+</code></pre>
+
+<h2>Output:</h2>
+<p>Here are some images showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
+<img src="https://github.com/user-attachments/assets/16d2bb09-48e6-4bcf-867c-0af5a657f36c" alt="animated_custom_hint_textfield_" height="400" width="250">
+
+
 <h2>Animation Types</h2>
 <ul>
-  <li><strong>Cyclic Scrolling</strong>: The hint text scrolls cyclically, looping through the provided hints.</li>
-  <li><strong>Slide Animation</strong>: Hints slide in and out of the text field horizontally.</li>
-  <li><strong>Scale Animation</strong>: The hint text scales in and out for a zoom effect.</li>
-  <li><strong>Fade Animation</strong>: Hints fade in and out for a smooth transition effect.</li>
-  <li><strong>Vertical Animations</strong>: Hints move vertically (top-to-bottom or bottom-to-top) through the text field.</li>
+  <li><strong>Cyclic Scrolling</strong>: The hint text scrolls cyclically, looping through the provided hints. [CircularAnimatedHintTextField]</li>
+  <li><strong>Slide Animation</strong>: Hints slide in and out of the text field horizontally. [AnimatedHintTextField]</li>
+  <li><strong>Scale Animation</strong>: The hint text scales in and out for a zoom effect. [AnimatedHintTextField]</li>
+  <li><strong>Fade Animation</strong>: Hints fade in and out for a smooth transition effect. [AnimatedHintTextField]</li>
+  <li><strong>Vertical Animations</strong>: Hints move vertically (top-to-bottom or bottom-to-top) through the text field. [AnimatedHintTextField]</li>
 </ul>
 
 <h2>Customization</h2>
@@ -120,31 +184,19 @@ CircularAnimatedHintTextField(
   <li><strong>Background Color</strong>: Set the background color of the text field.</li>
 </ul>
 
-<h2>Example</h2>
-<p>Here is an example usage of the <strong>Custom Animated Hint TextField</strong> widget:</p>
-<pre><code>
-AnimatedHintTextField(
-  hints: ["Find your favorite 🍕", "Search now 🔍"],
-  hintAnimationType: HintAnimationType.fade,
-  hintChangeDuration: Duration(seconds: 2),
-  backgroundColor: Colors.grey[200],
-)
-</code></pre>
+<h2>Animation Examples:</h2>
+<img src="https://github.com/user-attachments/assets/bf141676-6c07-4a06-8855-57d4954704b2" alt="custom_animated_hint_textfield1" height="400" width="250">
+<img src="https://github.com/user-attachments/assets/741313cc-d81c-471e-9cc8-e8ee8af6df32" alt="custom_animated_hint_textfield2" height="400" width="250">
 
-<h2>Images</h2>
-<p>Here are some images showcasing the <strong>Custom Animated Hint TextField</strong> in action:</p>
-<img src="https://github.com/user-attachments/assets/f5d33b98-b737-4f0e-9890-55c7bdeed24a" height="400" width="200">
-<img src="https://github.com/user-attachments/assets/a6325497-b4cc-4a1a-989d-13de6a30e82a" height="400" width="200">
-<img src="https://github.com/user-attachments/assets/ee8045e6-7de5-44a2-add2-7e5c1fd14319" height="400" width="250">
+<br>
+
+<img src="https://github.com/user-attachments/assets/3e42ab56-a81d-4d97-b2aa-9ebccdef719e" alt="custom_animated_hint_textfield3" height="400" width="250">
+<img src="https://github.com/user-attachments/assets/d8628a89-9a51-4562-9790-8a995a158bad" alt="custom_animated_hint_textfield4" height="400" width="250">
+
 
 <h2>Conclusion</h2>
 <p>The <strong>Custom Animated Hint TextField</strong> package allows you to add beautiful and dynamic hint text animations to your Flutter applications, creating an engaging user experience. With multiple animation types and full customization options, you can tailor the animations to suit your app’s style.</p>
 
 <h2>Feedback</h2>
 <p>If you encounter any issues or have suggestions, feel free to contribute or open an issue on the GitHub repository. Your feedback is highly appreciated!</p>
-
-
-
-
-
 
