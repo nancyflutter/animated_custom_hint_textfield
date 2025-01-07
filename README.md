@@ -16,23 +16,50 @@
 <pre> 
 <code> 
 dependencies: 
-  custom_animated_hint_textfield: ^1.0.0 
+  custom_animated_hint_textfield: ^latest_version
 </code> 
 </pre> 
 <p>Then, run <code>flutter pub get</code> to fetch the package.</p> 
+
+<p>Then, import it in your Dart file: </code> file:</p> 
+<pre> 
+<code> 
+import 'package:circular_animated_hint_text_field/circular_animated_hint_text_field.dart';
+</code> 
+</pre> 
 
 <h2>Usage</h2> 
 <p>To use the <strong>Custom Animated Hint TextField</strong> widget in your app, simply add it to your widget tree with the desired animation types and customization options. Here's an example:</p> 
 <pre> 
 <code> 
-AnimatedHintTextField( 
-  hints: ["Find your favorite 🍕", "Search now 🔍"], 
-  hintAnimationType: HintAnimationType.fade, 
-  hintChangeDuration: Duration(seconds: 2), 
-  backgroundColor: Colors.grey[200], 
-); 
+// Animated Hint Text with static text
+CircularAnimatedHintTextField(
+  prefixIcon: Icon(Icons.search_off_rounded, color: Colors.purple), 
+  suffixIcon: Icon(Icons.access_time_filled, color: Colors.purple),
+  staticHintText: "Search food...",
+  staticHintTextStyle: TextStyle(color: Colors.grey, fontSize: 14),
+  hints: [
+    "'Burger Delights 🍔'",
+    "'Pizza Heaven 🍕'",
+    "'Sweet Treats 🍰'",
+    "'Noodles Galore 🍜'",
+    "'Taco Time 🌯'",
+    "'Fries Galore 🍟'",
+  ],
+  animatedHintTextStyle: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+),
 </code> 
 </pre> 
+
+<h2>Customization</h2> 
+<ul> 
+  <li><strong>staticHintText</strong>: The static text that appears before the animated hint.</li> 
+  <li><strong>Slide Animatio</strong>: Style for the animated hint text.</li> 
+  <li><strong>hints</strong>: List of hints to cycle through.</li> 
+  <li><strong>prefixIcon</strong>: Optional prefix icon.</li> 
+  <li><strong>suffixIcon</strong>: Optional suffix icon.</li> 
+  <li><strong>autoFocus</strong>: Automatically focus the input field when initialized.</li> 
+</ul> 
 
 <h2>Animation Types</h2> 
 <ul> 
