@@ -1,5 +1,3 @@
-<h2>Custom Animated Hint TextField</h2>
-
 <p>The <strong>Custom Animated Hint TextField</strong> is a Flutter package that enhances text input fields with dynamic and visually appealing animations for hint texts. You can create unique animations like cyclic scrolling, sliding, scaling, fading, and more, while maintaining the flexibility to customize the design and behavior to suit your app’s needs.</p>
 
 <h2>Features</h2>
@@ -87,7 +85,10 @@ CircularAnimatedHintTextField(
 
 <p>The animated hints will automatically cycle through the provided list of suggestions, providing a more dynamic search experience for your users.</p>
 
-![animated_field_A](https://github.com/user-attachments/assets/42835fd5-187c-4ceb-9e10-d16805798b1c)
+<img src="https://github.com/user-attachments/assets/42835fd5-187c-4ceb-9e10-d16805798b1c" alt="animated_field_A" height="400" width="230">
+<img src="https://github.com/user-attachments/assets/92cb5af7-0bfc-40aa-9f61-52d234ac5126" alt="1" height="400" width="200">
+<img src="https://github.com/user-attachments/assets/2433e58b-cf4a-49fc-81b7-03d62e34c856" alt="2" height="400" width="200">
+<img src="https://github.com/user-attachments/assets/8949f3b0-6c60-4ab3-b792-936662f19bf6" alt="3" height="400" width="200">
 
 
 <h3>Customization Options</h3>
