@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: GestureDetector(
         onTap: () {
-          FocusManager().primaryFocus?.unfocus();
+          FocusManager.instance.primaryFocus?.unfocus();
         },
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -60,12 +60,12 @@ class HomeScreen extends StatelessWidget {
                   staticSearchText: "Search food...",
                   hintStyleForStatic: TextStyle(color: Colors.grey, fontSize: 14),
                   hints: [
-                    "Burger Delights 🍔",
-                    "Pizza Heaven 🍕",
-                    "Sweet Treats 🍰",
-                    "Noodles Galore 🍜",
-                    "Taco Time 🌯",
-                    "Fries Galore 🍟",
+                    "Sizzling Steaks 🥩",
+                    "Pasta Paradise 🍝",
+                    "Dessert Dreams 🍨",
+                    "Sushi Spot 🍣",
+                    "Wrap Wonders 🌯",
+                    "Beverage Bliss 🥤",
                   ],
                   hintStyleForAnimatedHint: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
@@ -287,12 +287,12 @@ class HintAnimationScreen extends StatelessWidget {
                 ),
                 const CircularAnimatedHintTextField(
                   hints: [
-                    "Burger Delights 🍔",
-                    "Pizza Heaven 🍕",
-                    "Sweet Treats 🍰",
-                    "Noodles Galore 🍜",
-                    "Taco Time 🌯",
-                    "Fries Galore 🍟",
+                    "Sizzling Steaks 🥩",
+                    "Pasta Paradise 🍝",
+                    "Dessert Dreams 🍨",
+                    "Sushi Spot 🍣",
+                    "Wrap Wonders 🌯",
+                    "Beverage Bliss 🥤",
                   ],
                   hintStyleForAnimatedHint: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
                   animateEntireHint: true,
@@ -306,7 +306,7 @@ class HintAnimationScreen extends StatelessWidget {
                     "'Pizza Heaven 🍕'",
                     "'Sweet Treats 🍰'",
                     "'Noodles Galore 🍜'",
-                    "'Taco Time 🌯'",
+                    "'Taco Time 🥙'",
                     "'Fries Galore 🍟'",
                   ],
                   hintStyleForAnimatedHint: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
