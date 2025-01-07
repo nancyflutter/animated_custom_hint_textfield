@@ -269,7 +269,7 @@ class HintAnimationScreen extends StatelessWidget {
       ),
       body: GestureDetector(
         onTap: () {
-          FocusManager().primaryFocus?.unfocus();
+          FocusManager.instance.primaryFocus?.unfocus();
         },
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -280,7 +280,7 @@ class HintAnimationScreen extends StatelessWidget {
                 const SizedBox(height: 24),
 
                 // 1. Cyclic Scrolling Example
-                /// Static hint text with animated text
+                /// Animated Hint text Without static text
                 const Text(
                   " ◆ Cyclic Scrolling Animation",
                   style: TextStyle(fontSize: 15, color: Colors.purple, fontWeight: FontWeight.bold),
