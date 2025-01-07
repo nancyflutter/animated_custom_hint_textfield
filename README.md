@@ -24,14 +24,30 @@ dependencies:
 import 'package:custom_animated_hint_textfield/custom_animated_hint_textfield.dart';
 </code></pre>
 
-<h2>Usage</h2>
-<p>To use the <strong>Custom Animated Hint TextField</strong> widget in your app, simply add it to your widget tree with the desired animation types and customization options. Here's an example:</p>
+<h2>Usage 1:</h2>
+<p>The <strong>Custom Animated Hint TextField</strong> widget allows you to create a dynamic and visually appealing text input field with animated hints that guide the user. You can easily customize the hint text, animations, and styles to suit your app's design and functionality. Here's how you can use it:</p>
+
 <pre><code>
 CircularAnimatedHintTextField(
+  // The prefix icon displayed on the left side of the text field. 
+  // You can customize the icon and color to fit your design.
   prefixIcon: Icon(Icons.search_off_rounded, color: Colors.purple), 
-  suffixIcon: Icon(Icons.access_time_filled, color: Colors.purple),
-  staticHintText: "Search food...",
-  staticHintTextStyle: TextStyle(color: Colors.grey, fontSize: 14),
+  
+  // The suffix icon displayed on the right side of the text field.
+  // Similar to the prefix icon, you can change it based on your requirements.
+  // suffixIcon: Icon(Icons.access_time_filled, color: Colors.purple),
+
+  // The static hint text that appears when the text field is empty.
+  // This text can be customized to guide the user on what to input. 
+  // Example: "Search food...".
+  staticHintText: "Search food...",  // <-- Modify this to change the default hint text.
+  
+  // The style applied to the static hint text. 
+  // This allows you to change the color, font size, and other text styling properties.
+  staticHintTextStyle: TextStyle(color: Colors.grey, fontSize: 14),  // <-- Modify this for different text styles for the static hint.
+  
+  // A list of animated hint texts that will appear in sequence.
+  // Customize these texts to provide more suggestions, like popular searches or categories.
   hints: [
     "Burger Delights 🍔",
     "Pizza Heaven 🍕",
@@ -40,9 +56,49 @@ CircularAnimatedHintTextField(
     "Taco Time 🌯",
     "Fries Galore 🍟",
   ],
+  
+  // The style applied to the animated hint text.
+  // This style is for the hint text shown when the user interacts with the text field.
+  // Customize it for a bolder or different color/style for better visibility.
   animatedHintTextStyle: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
 )
 </code></pre>
+
+<p>If you prefer not to use the static hint text, you can leave out the <code>staticHintText</code> and <code>staticHintTextStyle</code> properties. Only the animated hint text will be displayed, cycling through the values provided in the <code>hints</code> list.</p>
+
+<h3>Example:</h3>
+<pre><code>
+CircularAnimatedHintTextField(
+  // You can leave out static hint text if you don't want a default hint.
+  // staticHintText: "Search food...",
+  // staticHintTextStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+  prefixIcon: Icon(Icons.search_off_rounded, color: Colors.purple), 
+  suffixIcon: Icon(Icons.access_time_filled, color: Colors.purple),
+  hints: [
+    "Spicy Dishes 🌶️",
+    "Quick Meals 🍴",
+    "Healthy Options 🥗",
+    "Desserts 🍦",
+    "Vegan Delights 🌱",
+  ],
+  animatedHintTextStyle: TextStyle(fontSize: 16, color: Colors.green, fontWeight: FontWeight.bold),
+)
+</code></pre>
+
+<p>The animated hints will automatically cycle through the provided list of suggestions, providing a more dynamic search experience for your users.</p>
+
+![animated_field_A](https://github.com/user-attachments/assets/42835fd5-187c-4ceb-9e10-d16805798b1c)
+
+
+<h3>Customization Options</h3>
+<ul>
+  <li><strong>prefixIcon</strong>: Customize the icon on the left of the text field.</li>
+  <li><strong>suffixIcon</strong>: Customize the icon on the right of the text field.</li>
+  <li><strong>staticHintText</strong>: Set a static default hint text.</li>
+  <li><strong>staticHintTextStyle</strong>: Customize the style of the static hint text.</li>
+  <li><strong>hints</strong>: Provide a list of animated hint texts to display sequentially.</li>
+  <li><strong>animatedHintTextStyle</strong>: Set the style for the animated hint text that appears during user interaction.</li>
+</ul>
 
 <h2>Animation Types</h2>
 <ul>
