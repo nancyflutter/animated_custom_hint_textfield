@@ -115,7 +115,7 @@ CircularAnimatedHintTextField(
 </code></pre>
 
 <p>Here is an example usage of the <strong>Custom Animated Hint TextField</strong> widget:</p>
-<h2>Exampe [static text with animated hint]</h2>
+<h2>Example [static text with animated hint]</h2>
 <pre><code>
 AnimatedHintTextField(
   animateHintText: false,
@@ -138,7 +138,7 @@ AnimatedHintTextField(
 
 <img src="https://github.com/user-attachments/assets/2c952678-3c0e-46a6-a068-02424aeacde2" alt="custom_animated_hint_textfield1" height="400" width="250">
 
-<h2>Exampe [Animated hint without static Text]</h2>
+<h2>Example [Animated hint without static Text]</h2>
 <pre><code>
 // Fade Animation
 AnimatedHintTextField(
@@ -167,11 +167,11 @@ AnimatedHintTextField(
 
 <h2>Animation Types</h2>
 <ul>
-  <li><strong>Cyclic Scrolling</strong>: The hint text scrolls cyclically, looping through the provided hints. [CircularAnimatedHintTextField]</li>
-  <li><strong>Slide Animation</strong>: Hints slide in and out of the text field horizontally. [AnimatedHintTextField]</li>
-  <li><strong>Scale Animation</strong>: The hint text scales in and out for a zoom effect. [AnimatedHintTextField]</li>
-  <li><strong>Fade Animation</strong>: Hints fade in and out for a smooth transition effect. [AnimatedHintTextField]</li>
-  <li><strong>Vertical Animations</strong>: Hints move vertically (top-to-bottom or bottom-to-top) through the text field. [AnimatedHintTextField]</li>
+  <li><strong>Cyclic Scrolling</strong>: The hint text scrolls cyclically, looping through the provided hints. [use CircularAnimatedHintTextField widget]</li>
+  <li><strong>Slide Animation</strong>: Hints slide in and out of the text field horizontally. [use AnimatedHintTextField widget]</li>
+  <li><strong>Scale Animation</strong>: The hint text scales in and out for a zoom effect. [use AnimatedHintTextField widget]</li>
+  <li><strong>Fade Animation</strong>: Hints fade in and out for a smooth transition effect. [use AnimatedHintTextField widget]</li>
+  <li><strong>Vertical Animations</strong>: Hints move vertically (top-to-bottom or bottom-to-top) through the text field. [use AnimatedHintTextField widget]</li>
 </ul>
 
 <h2>Customization</h2>
@@ -185,13 +185,14 @@ AnimatedHintTextField(
 </ul>
 
 <h2>Animation Examples:</h2>
-<img src="https://github.com/user-attachments/assets/bf141676-6c07-4a06-8855-57d4954704b2" alt="custom_animated_hint_textfield1" height="400" width="250">
-<img src="https://github.com/user-attachments/assets/741313cc-d81c-471e-9cc8-e8ee8af6df32" alt="custom_animated_hint_textfield2" height="400" width="250">
-
-<br>
 
 <img src="https://github.com/user-attachments/assets/3e42ab56-a81d-4d97-b2aa-9ebccdef719e" alt="custom_animated_hint_textfield3" height="400" width="250">
 <img src="https://github.com/user-attachments/assets/d8628a89-9a51-4562-9790-8a995a158bad" alt="custom_animated_hint_textfield4" height="400" width="250">
+
+<br>
+
+<img src="https://github.com/user-attachments/assets/bf141676-6c07-4a06-8855-57d4954704b2" alt="custom_animated_hint_textfield1" height="400" width="250">
+<img src="https://github.com/user-attachments/assets/741313cc-d81c-471e-9cc8-e8ee8af6df32" alt="custom_animated_hint_textfield2" height="400" width="250">
 
 
 <h2>Conclusion</h2>
