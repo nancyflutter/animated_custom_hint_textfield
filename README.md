@@ -3,11 +3,22 @@
 
 <h2>Features</h2>
 <ul>
-  <li><strong>Animated Hint Text</strong>: Easily add animated hints that change dynamically within the text field.</li>
-  <li><strong>Multiple Animation Types</strong>: Includes cyclic scrolling, slide, scale, fade, and other animation effects for your hint text.</li>
-  <li><strong>Customizable Design</strong>: Customize the hint text style, animation duration, and other properties to match your app's design.</li>
-  <li><strong>Static and Animated Hints</strong>: Support for both static and animated hint text transitions.</li>
-  <li><strong>Cross-Platform Compatibility</strong>: Fully supports iOS, Android, and web platforms.</li>
+  <li>
+    <strong>Animated Hint Text</strong>: Effortlessly add dynamic animated hints to your text field by providing a list 
+    (e.g., <code>["A", "B", "C", "D", "E"]</code>) to the <code>hints:</code> parameter, enabling seamless animations that change dynamically.
+  </li>
+  <li>
+    <strong>Multiple Animation Types</strong>: Includes cyclic scrolling, slide, scale, fade, and other animation effects for your hint text.
+  </li>
+  <li>
+    <strong>Customizable Design</strong>: Customize the hint text style, animation duration, and other properties to match your app's design.
+  </li>
+  <li>
+    <strong>Static and Animated Hints</strong>: Support for both static and animated hint text transitions.
+  </li>
+  <li>
+    <strong>Cross-Platform Compatibility</strong>: Fully supports <strong>iOS</strong>, <strong>Android</strong>, and <strong>web</strong> platforms.
+  </li>
 </ul>
 
 <h2>Installation</h2>

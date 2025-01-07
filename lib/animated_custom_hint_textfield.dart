@@ -61,21 +61,24 @@ class AnimatedHintTextField extends StatefulWidget {
     this.fieldBorderWidth = 1.0,
     this.prefixIcon,
     this.suffixIcon,
-    this.hintAnimationType = HintAnimationType.fade, // Default to fade animation
+    this.hintAnimationType =
+        HintAnimationType.fade, // Default to fade animation
   });
 
   @override
   State<AnimatedHintTextField> createState() => _AnimatedHintTextFieldState();
 }
 
-class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with SingleTickerProviderStateMixin {
+class _AnimatedHintTextFieldState extends State<AnimatedHintTextField>
+    with SingleTickerProviderStateMixin {
   late TextEditingController _controller;
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   late Animation<Offset> _slideAnimation;
   late Animation<double> _scaleAnimation;
 
-  final FixedExtentScrollController _scrollController = FixedExtentScrollController();
+  final FixedExtentScrollController _scrollController =
+      FixedExtentScrollController();
 
   int _currentIndex = 0;
   bool _isTyping = false;
@@ -101,12 +104,15 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
       curve: Curves.easeInOut,
     );
 
-    _slideAnimation = Tween<Offset>(begin: const Offset(0.0, 0.5), end: Offset.zero).animate(CurvedAnimation(
+    _slideAnimation =
+        Tween<Offset>(begin: const Offset(0.0, 0.5), end: Offset.zero)
+            .animate(CurvedAnimation(
       parent: _animationController,
       curve: Curves.easeInOut,
     ));
 
-    _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(CurvedAnimation(
+    _scaleAnimation =
+        Tween<double>(begin: 0.8, end: 1.0).animate(CurvedAnimation(
       parent: _animationController,
       curve: Curves.easeInOut,
     ));
@@ -150,7 +156,9 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
         borderRadius: widget.borderRadius ?? BorderRadius.circular(8),
         border: widget.fieldBorder ??
             Border.all(
-              color: _isFocused ? widget.focusedBorderColor ?? Colors.blue : widget.unfocusedBorderColor ?? Colors.grey[300]!,
+              color: _isFocused
+                  ? widget.focusedBorderColor ?? Colors.blue
+                  : widget.unfocusedBorderColor ?? Colors.grey[300]!,
               width: widget.fieldBorderWidth ?? 1.0,
             ),
       ),
@@ -178,7 +186,9 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
                             if (!widget.animateHintText)
                               Text(
                                 widget.staticHintText ?? "",
-                                style: widget.staticHintTextStyle ?? const TextStyle(fontSize: 14, color: Colors.black),
+                                style: widget.staticHintTextStyle ??
+                                    const TextStyle(
+                                        fontSize: 14, color: Colors.black),
                               ),
                             Flexible(
                               child: _buildAnimationWidget(),
@@ -247,7 +257,10 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
           ),
         );
       case HintAnimationType.slideFromTop:
-        final slideFromTopAnimation = Tween<Offset>(begin: const Offset(0.0, -1.0), end: Offset.zero).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeInOut));
+        final slideFromTopAnimation =
+            Tween<Offset>(begin: const Offset(0.0, -1.0), end: Offset.zero)
+                .animate(CurvedAnimation(
+                    parent: _animationController, curve: Curves.easeInOut));
         return SlideTransition(
           position: slideFromTopAnimation,
           child: FadeTransition(
@@ -261,7 +274,10 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
           ),
         );
       case HintAnimationType.slideFromBottom:
-        final slideFromBottomAnimation = Tween<Offset>(begin: const Offset(0.0, 1.0), end: Offset.zero).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeInOut));
+        final slideFromBottomAnimation =
+            Tween<Offset>(begin: const Offset(0.0, 1.0), end: Offset.zero)
+                .animate(CurvedAnimation(
+                    parent: _animationController, curve: Curves.easeInOut));
         return SlideTransition(
           position: slideFromBottomAnimation,
           child: FadeTransition(
@@ -275,9 +291,11 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
           ),
         );
       case HintAnimationType.topToBottom:
-        return _buildCircularScrollingAnimation(const Offset(0, -1), const Offset(0, 1));
+        return _buildCircularScrollingAnimation(
+            const Offset(0, -1), const Offset(0, 1));
       case HintAnimationType.bottomToTop:
-        return _buildCircularScrollingAnimation(const Offset(0, 1), const Offset(0, -1));
+        return _buildCircularScrollingAnimation(
+            const Offset(0, 1), const Offset(0, -1));
     }
   }
 
@@ -296,7 +314,8 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
         opacity: _fadeAnimation,
         child: Text(
           widget.hints[_currentIndex],
-          style: widget.animatedHintTextStyle ?? const TextStyle(fontSize: 16, color: Colors.grey),
+          style: widget.animatedHintTextStyle ??
+              const TextStyle(fontSize: 16, color: Colors.grey),
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
         ),
@@ -350,13 +369,16 @@ class CircularAnimatedHintTextField extends StatefulWidget {
   });
 
   @override
-  State<CircularAnimatedHintTextField> createState() => _CircularAnimatedHintTextFieldState();
+  State<CircularAnimatedHintTextField> createState() =>
+      _CircularAnimatedHintTextFieldState();
 }
 
-class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintTextField> {
+class _CircularAnimatedHintTextFieldState
+    extends State<CircularAnimatedHintTextField> {
   final TextEditingController _controller = TextEditingController();
   late final List<String> _cyclicHints;
-  final FixedExtentScrollController _scrollController = FixedExtentScrollController();
+  final FixedExtentScrollController _scrollController =
+      FixedExtentScrollController();
   int _currentIndex = 0;
   bool isUserTyping = false;
   bool _isFocused = false;
@@ -386,7 +408,8 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
       } else {
         // Reset the index when reaching the end, creating a seamless loop
         _currentIndex = widget.hints.length;
-        _scrollController.jumpToItem(_currentIndex); // Set position to middle of list
+        _scrollController
+            .jumpToItem(_currentIndex); // Set position to middle of list
       }
 
       // Animate to the new hint smoothly
@@ -396,7 +419,8 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
             duration: const Duration(milliseconds: 300),
             curve: Curves.easeInOut,
           )
-          .then((_) => _startAutoScroll()); // Continue scrolling after animation completes
+          .then((_) =>
+              _startAutoScroll()); // Continue scrolling after animation completes
     });
   }
 
@@ -422,7 +446,9 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
         borderRadius: widget.borderRadius ?? BorderRadius.circular(8),
         border: widget.fieldBorder ??
             Border.all(
-              color: _isFocused ? widget.focusedBorderColor ?? Colors.blue : widget.unfocusedBorderColor ?? Colors.grey[300]!,
+              color: _isFocused
+                  ? widget.focusedBorderColor ?? Colors.blue
+                  : widget.unfocusedBorderColor ?? Colors.grey[300]!,
               width: widget.fieldBorderWidth ?? 1.0,
             ),
       ),
@@ -452,7 +478,9 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
                             if (widget.staticHintText != "")
                               Text(
                                 widget.staticHintText ?? "",
-                                style: widget.staticHintTextStyle ?? const TextStyle(fontSize: 16, color: Colors.grey),
+                                style: widget.staticHintTextStyle ??
+                                    const TextStyle(
+                                        fontSize: 16, color: Colors.grey),
                               ),
                             // Show hint cycling when typing is not happening
                             if (!isUserTyping)
@@ -461,17 +489,21 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
                                   height: 50,
                                   child: ListWheelScrollView.useDelegate(
                                     controller: _scrollController,
-                                    physics: const NeverScrollableScrollPhysics(),
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
                                     itemExtent: 50,
                                     overAndUnderCenterOpacity: 0.5,
                                     perspective: 0.003,
-                                    childDelegate: ListWheelChildBuilderDelegate(
+                                    childDelegate:
+                                        ListWheelChildBuilderDelegate(
                                       builder: (context, index) {
                                         return Row(
                                           children: [
                                             Text(
-                                              widget.hints[index % widget.hints.length],
-                                              style: widget.animatedHintTextStyle ??
+                                              widget.hints[
+                                                  index % widget.hints.length],
+                                              style: widget
+                                                      .animatedHintTextStyle ??
                                                   const TextStyle(
                                                     fontSize: 16,
                                                     color: Colors.blue,
