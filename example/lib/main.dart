@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         scaffoldBackgroundColor: Colors.white,
       ),
-      // home: const HomeScreen(), // Example of With static text animated Hint
-      home: const HintAnimationScreen(), // Example of without Static text Hint
+      home: const HomeScreen(), // Example of With static text animated Hint
+      // home: const HintAnimationScreen(), // Example of without Static text Hint
     );
   }
 }
@@ -54,11 +54,15 @@ class HomeScreen extends StatelessWidget {
                 /// Static hint text with animated text
                 const Text(
                   " ◆ Cyclic Scrolling Animation",
-                  style: TextStyle(fontSize: 15, color: Colors.purple, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.purple,
+                      fontWeight: FontWeight.bold),
                 ),
                 const CircularAnimatedHintTextField(
                   staticHintText: "Search food...",
-                  staticHintTextStyle: TextStyle(color: Colors.grey, fontSize: 14),
+                  staticHintTextStyle:
+                      TextStyle(color: Colors.grey, fontSize: 14),
                   hints: [
                     "Sizzling Steaks 🥩",
                     "Pasta Paradise 🍝",
@@ -67,14 +71,20 @@ class HomeScreen extends StatelessWidget {
                     "Wrap Wonders 🌯",
                     "Beverage Bliss 🥤",
                   ],
-                  animatedHintTextStyle: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 14),
                 const CircularAnimatedHintTextField(
-                  prefixIcon: Icon(Icons.search_off_rounded, color: Colors.purple),
-                  suffixIcon: Icon(Icons.access_time_filled, color: Colors.purple),
+                  prefixIcon:
+                      Icon(Icons.search_off_rounded, color: Colors.purple),
+                  suffixIcon:
+                      Icon(Icons.access_time_filled, color: Colors.purple),
                   staticHintText: "Search food...",
-                  staticHintTextStyle: TextStyle(color: Colors.grey, fontSize: 14),
+                  staticHintTextStyle:
+                      TextStyle(color: Colors.grey, fontSize: 14),
                   hints: [
                     "'Burger Delights 🍔'",
                     "'Pizza Heaven 🍕'",
@@ -83,29 +93,39 @@ class HomeScreen extends StatelessWidget {
                     "'Taco Time 🌯'",
                     "'Fries Galore 🍟'",
                   ],
-                  animatedHintTextStyle: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 24),
 
                 // 2. Slide Animation Example
                 const Text(
                   " ◆ Slide Animation",
-                  style: TextStyle(fontSize: 15, color: Colors.deepOrange, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.deepOrange,
+                      fontWeight: FontWeight.bold),
                 ),
                 AnimatedHintTextField(
                   prefixIcon: const Text("🫠"),
                   fieldBorder: Border.all(color: Colors.transparent),
                   borderRadius: BorderRadius.circular(100),
                   staticHintText: "Search items...",
-                  staticHintTextStyle: TextStyle(color: Colors.grey.shade400, fontSize: 14),
+                  staticHintTextStyle:
+                      TextStyle(color: Colors.grey.shade400, fontSize: 14),
                   hints: const [
                     "🔍 Quick search",
                     "🚀 Easy navigation",
                     "🌍 Explore destinations",
                   ],
-                  // animateHintText: false,
+                  animateHintText: false,
                   fieldBackgroundColor: Colors.grey[100],
-                  animatedHintTextStyle: const TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                   hintSwitchDuration: const Duration(seconds: 3),
                   hintAnimationType: HintAnimationType.slide,
                 ),
@@ -114,7 +134,10 @@ class HomeScreen extends StatelessWidget {
                 // 3. Scale Animation Example
                 const Text(
                   " ◆ Scale In/Out Animation",
-                  style: TextStyle(fontSize: 15, color: Colors.green, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold),
                 ),
                 AnimatedHintTextField(
                   suffixIcon: const Icon(Icons.ac_unit, color: Colors.green),
@@ -123,7 +146,8 @@ class HomeScreen extends StatelessWidget {
                   unfocusedBorderColor: Colors.grey,
                   borderRadius: BorderRadius.circular(20),
                   staticHintText: "Find items...",
-                  staticHintTextStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+                  staticHintTextStyle:
+                      const TextStyle(color: Colors.grey, fontSize: 14),
                   hints: const [
                     "Pizza 🍕",
                     "Burger 🍔",
@@ -131,9 +155,12 @@ class HomeScreen extends StatelessWidget {
                     "Noodles 🍜",
                     "Sandwich 🥪",
                   ],
-                  // animateHintText: false,
+                  animateHintText: false,
                   fieldBackgroundColor: Colors.grey[100],
-                  animatedHintTextStyle: const TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                   hintSwitchDuration: const Duration(seconds: 3),
                   hintAnimationType: HintAnimationType.scale,
                 ),
@@ -142,12 +169,17 @@ class HomeScreen extends StatelessWidget {
                 // 4. Circular Scrolling (Top to Bottom) Animation Example
                 const Text(
                   " ◆ Top to Bottom",
-                  style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold),
                 ),
                 AnimatedHintTextField(
-                  prefixIcon: const Icon(Icons.bubble_chart, color: Colors.blue),
+                  prefixIcon:
+                      const Icon(Icons.bubble_chart, color: Colors.blue),
                   staticHintText: "Find items...",
-                  staticHintTextStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+                  staticHintTextStyle:
+                      const TextStyle(color: Colors.grey, fontSize: 14),
                   fieldBorder: Border.all(color: Colors.transparent),
                   borderRadius: BorderRadius.circular(100),
                   hints: const [
@@ -156,9 +188,12 @@ class HomeScreen extends StatelessWidget {
                     "Watch Movies 🎥",
                     "Listen to Music 🎧",
                   ],
-                  // animateHintText: false,
+                  animateHintText: false,
                   fieldBackgroundColor: Colors.grey[100],
-                  animatedHintTextStyle: const TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: const TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                   hintSwitchDuration: const Duration(seconds: 3),
                   hintAnimationType: HintAnimationType.topToBottom,
                 ),
@@ -166,11 +201,15 @@ class HomeScreen extends StatelessWidget {
 
                 const Text(
                   " ◆ Bottom To Top",
-                  style: TextStyle(fontSize: 15, color: Colors.blue, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold),
                 ),
                 AnimatedHintTextField(
                   staticHintText: "Find items...",
-                  staticHintTextStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+                  staticHintTextStyle:
+                      const TextStyle(color: Colors.grey, fontSize: 14),
                   fieldBorder: Border.all(color: Colors.transparent),
                   borderRadius: BorderRadius.circular(100),
                   hints: const [
@@ -179,9 +218,12 @@ class HomeScreen extends StatelessWidget {
                     "Watch Movies 🎥",
                     "Listen to Music 🎧",
                   ],
-                  // animateHintText: false,
+                  animateHintText: false,
                   fieldBackgroundColor: Colors.grey[100],
-                  animatedHintTextStyle: const TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: const TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                   hintSwitchDuration: const Duration(seconds: 3),
                   hintAnimationType: HintAnimationType.bottomToTop,
                 ),
@@ -190,19 +232,26 @@ class HomeScreen extends StatelessWidget {
                 // 5. Fade Animation Example
                 const Text(
                   " ◆ Fade Animation",
-                  style: TextStyle(fontSize: 16, color: Colors.pink, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.pink,
+                      fontWeight: FontWeight.bold),
                 ),
                 AnimatedHintTextField(
-                  // animateHintText: false,
+                  animateHintText: false,
                   hints: const [
                     '💡 Quick Search',
                     '🌍 Explore More',
                     '🔍 Find Your Favorite',
                   ],
                   staticHintText: "Search items...",
-                  staticHintTextStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+                  staticHintTextStyle:
+                      const TextStyle(color: Colors.grey, fontSize: 14),
                   fieldBackgroundColor: Colors.grey[200],
-                  animatedHintTextStyle: const TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: const TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                   hintSwitchDuration: const Duration(seconds: 2),
                   hintAnimationType: HintAnimationType.fade,
                 ),
@@ -211,33 +260,58 @@ class HomeScreen extends StatelessWidget {
                 // 6. Slide from Top Animation Example
                 const Text(
                   " ◆ Slide From Top Animation",
-                  style: TextStyle(fontSize: 16, color: Colors.indigo, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.indigo,
+                      fontWeight: FontWeight.bold),
                 ),
                 const AnimatedHintTextField(
-                  // animateHintText: false,
+                  animateHintText: false,
                   staticHintText: "Find items...",
-                  staticHintTextStyle: TextStyle(color: Colors.grey, fontSize: 14),
-                  hints: ["✨ Sparkle", "🎉 Celebrate", "🌟 Shine Bright", "💥 Explode", "💫 Magic"],
+                  staticHintTextStyle:
+                      TextStyle(color: Colors.grey, fontSize: 14),
+                  hints: [
+                    "✨ Sparkle",
+                    "🎉 Celebrate",
+                    "🌟 Shine Bright",
+                    "💥 Explode",
+                    "💫 Magic"
+                  ],
                   hintAnimationType: HintAnimationType.slideFromTop,
-                  animatedHintTextStyle: TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 24),
 
                 // 7. Slide From Bottom Animation Example
                 const Text(
                   " ◆ Slide From Bottom Animation",
-                  style: TextStyle(fontSize: 16, color: Colors.orange, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.orange,
+                      fontWeight: FontWeight.bold),
                 ),
                 AnimatedHintTextField(
                   prefixIcon: const Icon(Icons.search, color: Colors.orange),
                   fieldBorder: Border.all(color: Colors.transparent),
                   borderRadius: BorderRadius.circular(100),
                   staticHintText: "Search...",
-                  staticHintTextStyle: const TextStyle(color: Colors.grey, fontSize: 14),
-                  hints: const ["🍕 Pizza", "🍔 Burger", "🍩 Donut", "🍨 Ice Cream"],
+                  staticHintTextStyle:
+                      const TextStyle(color: Colors.grey, fontSize: 14),
+                  hints: const [
+                    "🍕 Pizza",
+                    "🍔 Burger",
+                    "🍩 Donut",
+                    "🍨 Ice Cream"
+                  ],
                   animateHintText: false,
                   fieldBackgroundColor: Colors.grey[100],
-                  animatedHintTextStyle: const TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+                  animatedHintTextStyle: const TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                   hintSwitchDuration: const Duration(seconds: 2),
                   hintAnimationType: HintAnimationType.slideFromBottom,
                 ),
@@ -446,19 +520,24 @@ class HintAnimationScreen extends StatelessWidget {
                 // 5. Fade Animation Example
                 const Text(
                   " ◆ Fade Animation",
-                  style: TextStyle(fontSize: 16, color: Colors.pink, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.pink,
+                      fontWeight: FontWeight.bold),
                 ),
                 AnimatedHintTextField(
-                  animateHintText: false,
-                  staticHintText: "Search... ",
-                  staticHintTextStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+                  // animateHintText: false,
+                  // staticHintText: "Search... ",
+                  staticHintTextStyle:
+                      const TextStyle(fontSize: 14, color: Colors.grey),
                   hints: const [
                     'Quick Search 💡',
                     'Explore More 🌍',
                     'Find Your Favorite 🔍',
                   ],
                   fieldBackgroundColor: Colors.grey[200],
-                  animatedHintTextStyle: const TextStyle(fontSize: 16, color: Colors.black),
+                  animatedHintTextStyle:
+                      const TextStyle(fontSize: 16, color: Colors.black),
                   hintSwitchDuration: const Duration(seconds: 2),
                   hintAnimationType: HintAnimationType.fade,
                 ),
@@ -585,14 +664,16 @@ class AnimatedHintTextField extends StatefulWidget {
   State<AnimatedHintTextField> createState() => _AnimatedHintTextFieldState();
 }
 
-class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with SingleTickerProviderStateMixin {
+class _AnimatedHintTextFieldState extends State<AnimatedHintTextField>
+    with SingleTickerProviderStateMixin {
   late TextEditingController _controller;
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   late Animation<Offset> _slideAnimation;
   late Animation<double> _scaleAnimation;
 
-  final FixedExtentScrollController _scrollController = FixedExtentScrollController();
+  final FixedExtentScrollController _scrollController =
+      FixedExtentScrollController();
 
   int _currentIndex = 0;
   bool _isTyping = false;
@@ -618,12 +699,15 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
       curve: Curves.easeInOut,
     );
 
-    _slideAnimation = Tween<Offset>(begin: const Offset(0.0, 0.5), end: Offset.zero).animate(CurvedAnimation(
+    _slideAnimation =
+        Tween<Offset>(begin: const Offset(0.0, 0.5), end: Offset.zero)
+            .animate(CurvedAnimation(
       parent: _animationController,
       curve: Curves.easeInOut,
     ));
 
-    _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(CurvedAnimation(
+    _scaleAnimation =
+        Tween<double>(begin: 0.8, end: 1.0).animate(CurvedAnimation(
       parent: _animationController,
       curve: Curves.easeInOut,
     ));
@@ -667,7 +751,9 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
         borderRadius: widget.borderRadius ?? BorderRadius.circular(8),
         border: widget.fieldBorder ??
             Border.all(
-              color: _isFocused ? widget.focusedBorderColor ?? Colors.blue : widget.unfocusedBorderColor ?? Colors.grey[300]!,
+              color: _isFocused
+                  ? widget.focusedBorderColor ?? Colors.blue
+                  : widget.unfocusedBorderColor ?? Colors.grey[300]!,
               width: widget.fieldBorderWidth ?? 1.0,
             ),
       ),
@@ -695,7 +781,9 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
                             if (!widget.animateHintText)
                               Text(
                                 widget.staticHintText ?? "",
-                                style: widget.staticHintTextStyle ?? const TextStyle(fontSize: 14, color: Colors.black),
+                                style: widget.staticHintTextStyle ??
+                                    const TextStyle(
+                                        fontSize: 14, color: Colors.black),
                               ),
                             Flexible(
                               child: _buildAnimationWidget(),
@@ -744,7 +832,10 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
             opacity: _fadeAnimation,
             child: Text(
               widget.hints[_currentIndex],
-              style: const TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
             ),
@@ -764,7 +855,10 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
           ),
         );
       case HintAnimationType.slideFromTop:
-        final slideFromTopAnimation = Tween<Offset>(begin: const Offset(0.0, -1.0), end: Offset.zero).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeInOut));
+        final slideFromTopAnimation =
+            Tween<Offset>(begin: const Offset(0.0, -1.0), end: Offset.zero)
+                .animate(CurvedAnimation(
+                    parent: _animationController, curve: Curves.easeInOut));
         return SlideTransition(
           position: slideFromTopAnimation,
           child: FadeTransition(
@@ -778,7 +872,10 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
           ),
         );
       case HintAnimationType.slideFromBottom:
-        final slideFromBottomAnimation = Tween<Offset>(begin: const Offset(0.0, 1.0), end: Offset.zero).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeInOut));
+        final slideFromBottomAnimation =
+            Tween<Offset>(begin: const Offset(0.0, 1.0), end: Offset.zero)
+                .animate(CurvedAnimation(
+                    parent: _animationController, curve: Curves.easeInOut));
         return SlideTransition(
           position: slideFromBottomAnimation,
           child: FadeTransition(
@@ -792,9 +889,11 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
           ),
         );
       case HintAnimationType.topToBottom:
-        return _buildCircularScrollingAnimation(const Offset(0, -1), const Offset(0, 1));
+        return _buildCircularScrollingAnimation(
+            const Offset(0, -1), const Offset(0, 1));
       case HintAnimationType.bottomToTop:
-        return _buildCircularScrollingAnimation(const Offset(0, 1), const Offset(0, -1));
+        return _buildCircularScrollingAnimation(
+            const Offset(0, 1), const Offset(0, -1));
     }
   }
 
@@ -813,7 +912,8 @@ class _AnimatedHintTextFieldState extends State<AnimatedHintTextField> with Sing
         opacity: _fadeAnimation,
         child: Text(
           widget.hints[_currentIndex],
-          style: widget.animatedHintTextStyle ?? const TextStyle(fontSize: 16, color: Colors.grey),
+          style: widget.animatedHintTextStyle ??
+              const TextStyle(fontSize: 16, color: Colors.grey),
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
         ),
@@ -861,13 +961,16 @@ class CircularAnimatedHintTextField extends StatefulWidget {
   });
 
   @override
-  State<CircularAnimatedHintTextField> createState() => _CircularAnimatedHintTextFieldState();
+  State<CircularAnimatedHintTextField> createState() =>
+      _CircularAnimatedHintTextFieldState();
 }
 
-class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintTextField> {
+class _CircularAnimatedHintTextFieldState
+    extends State<CircularAnimatedHintTextField> {
   final TextEditingController _controller = TextEditingController();
   late final List<String> _cyclicHints;
-  final FixedExtentScrollController _scrollController = FixedExtentScrollController();
+  final FixedExtentScrollController _scrollController =
+      FixedExtentScrollController();
   int _currentIndex = 0;
   bool isUserTyping = false;
   bool _isFocused = false;
@@ -897,7 +1000,8 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
       } else {
         // Reset the index when reaching the end, creating a seamless loop
         _currentIndex = widget.hints.length;
-        _scrollController.jumpToItem(_currentIndex); // Set position to middle of list
+        _scrollController
+            .jumpToItem(_currentIndex); // Set position to middle of list
       }
 
       // Animate to the new hint smoothly
@@ -907,7 +1011,8 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
             duration: const Duration(milliseconds: 300),
             curve: Curves.easeInOut,
           )
-          .then((_) => _startAutoScroll()); // Continue scrolling after animation completes
+          .then((_) =>
+              _startAutoScroll()); // Continue scrolling after animation completes
     });
   }
 
@@ -933,7 +1038,9 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
         borderRadius: widget.borderRadius ?? BorderRadius.circular(8),
         border: widget.fieldBorder ??
             Border.all(
-              color: _isFocused ? widget.focusedBorderColor ?? Colors.blue : widget.unfocusedBorderColor ?? Colors.grey[300]!,
+              color: _isFocused
+                  ? widget.focusedBorderColor ?? Colors.blue
+                  : widget.unfocusedBorderColor ?? Colors.grey[300]!,
               width: widget.fieldBorderWidth ?? 1.0,
             ),
       ),
@@ -963,7 +1070,9 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
                             if (widget.staticHintText != null)
                               Text(
                                 widget.staticHintText ?? "",
-                                style: widget.staticHintTextStyle ?? const TextStyle(fontSize: 16, color: Colors.grey),
+                                style: widget.staticHintTextStyle ??
+                                    const TextStyle(
+                                        fontSize: 16, color: Colors.grey),
                               ),
                             // Show hint cycling when typing is not happening
                             if (!isUserTyping)
@@ -972,17 +1081,21 @@ class _CircularAnimatedHintTextFieldState extends State<CircularAnimatedHintText
                                   height: 50,
                                   child: ListWheelScrollView.useDelegate(
                                     controller: _scrollController,
-                                    physics: const NeverScrollableScrollPhysics(),
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
                                     itemExtent: 50,
                                     overAndUnderCenterOpacity: 0.5,
                                     perspective: 0.003,
-                                    childDelegate: ListWheelChildBuilderDelegate(
+                                    childDelegate:
+                                        ListWheelChildBuilderDelegate(
                                       builder: (context, index) {
                                         return Row(
                                           children: [
                                             Text(
-                                              widget.hints[index % widget.hints.length],
-                                              style: widget.animatedHintTextStyle ??
+                                              widget.hints[
+                                                  index % widget.hints.length],
+                                              style: widget
+                                                      .animatedHintTextStyle ??
                                                   const TextStyle(
                                                     fontSize: 16,
                                                     color: Colors.blue,
