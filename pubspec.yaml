@@ -1,6 +1,6 @@
 name: animated_custom_hint_textfield
 description: "A Flutter package for creating fully customizable animated hint TextFields with diverse animations for enhanced UI and user engagement."
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/oneflutter/animated_custom_hint_textfield
 
 environment:
