@@ -7,14 +7,12 @@
 <img src="https://github.com/user-attachments/assets/2c952678-3c0e-46a6-a068-02424aeacde2" alt="custom_animated_hint_textfield1" height="400" width="250">
 <img src="https://github.com/user-attachments/assets/16d2bb09-48e6-4bcf-867c-0af5a657f36c" alt="animated_custom_hint_textfield_" height="400" width="250">
 <img src="https://github.com/user-attachments/assets/92cb5af7-0bfc-40aa-9f61-52d234ac5126" alt="1" height="400" width="200">
-<img src="https://github.com/user-attachments/assets/2433e58b-cf4a-49fc-81b7-03d62e34c856" alt="2" height="400" width="200">
 
 <br>
 
 <img src="https://github.com/user-attachments/assets/3e42ab56-a81d-4d97-b2aa-9ebccdef719e" alt="custom_animated_hint_textfield3" height="400" width="225">
 <img src="https://github.com/user-attachments/assets/d8628a89-9a51-4562-9790-8a995a158bad" alt="custom_animated_hint_textfield4" height="400" width="225">
 <img src="https://github.com/user-attachments/assets/bf141676-6c07-4a06-8855-57d4954704b2" alt="custom_animated_hint_textfield1" height="400" width="225">
-<img src="https://github.com/user-attachments/assets/741313cc-d81c-471e-9cc8-e8ee8af6df32" alt="custom_animated_hint_textfield2" height="400" width="225">
 
 
 <h2>Features</h2>
