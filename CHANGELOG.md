@@ -1,4 +1,4 @@
-## [1.0.0] - 2025-07-23
+## [1.0.0] - 2025-08-04
 
 - Release of the Animated Custom Hint TextField package for Flutter.
 - Provides animations and customization options for creating Animated Custom Hint Search Field.
